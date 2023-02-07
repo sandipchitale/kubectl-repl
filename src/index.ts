@@ -31,6 +31,7 @@ import * as child_process from 'child_process';
                     const commandNumber = parseInt(matches[1]);
                     const historyCommand = history.find(historyItem => historyItem.startsWith(`${commandNumber} >`));
                     if (historyCommand) {
+                        console.log(`${historyCommand}\n`);
                         command = historyCommand.replace(`${commandNumber} > kubectl `, '');
                     }
                 } catch (error: any) {
